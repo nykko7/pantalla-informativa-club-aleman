@@ -3,7 +3,10 @@ import { red } from '@mui/material/colors';
 
 export const darkTheme = createTheme({
 	palette: {
-		mode: 'dark',
+		mode: 'light',
+		background: {
+			default: '#f3f3f3',
+		},
 	},
 
 	components: {
