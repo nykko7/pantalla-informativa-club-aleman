@@ -10,7 +10,14 @@ interface Props {
 
 export const SectionList: FC<Props> = ({ sections }) => {
 	return (
-		<Grid container spacing={2} display='flex'>
+		<Grid
+			container
+			display='grid'
+			columnGap={3}
+			rowGap={3}
+			gridTemplateColumns='repeat(2, 1fr)'
+			height='100%'
+		>
 			{sections.map((section) => {
 				return <SectionCard key={section.id} section={section} />;
 			})}

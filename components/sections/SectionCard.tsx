@@ -1,6 +1,7 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import {
 	alpha,
+	Box,
 	Card,
 	CardActionArea,
 	CardMedia,
@@ -11,18 +12,40 @@ import {
 import { ISection } from '../../interfaces';
 
 import * as _ from 'lodash';
-import { Box } from '@mui/material';
+import { SectionDialog } from './';
+import { useTranslation } from 'next-i18next';
 
 interface Props {
 	section: ISection;
 }
 
 export const SectionCard: FC<Props> = ({ section }) => {
+	const [openDialog, setOpenDialog] = useState(false);
+	const { t } = useTranslation();
+
+	const handleClickOpen = () => {
+		setOpenDialog(true);
+	};
+
+	const handleClose = () => {
+		setOpenDialog(false);
+	};
+
 	return (
-		<Grid item width='50%'>
-			<Card elevation={1} sx={{ borderRadius: '10px' }}>
+		<Grid item>
+			<SectionDialog
+				section={section}
+				open={openDialog}
+				handleClose={() => handleClose()}
+			/>
+			<Card elevation={1} sx={{ borderRadius: '10px', height: '100%' }}>
 				{/* <CardActionArea onClick={() => handleClick(section)}> */}
-				<CardActionArea onClick={() => {}}>
+				<CardActionArea
+					sx={{
+						height: '100%',
+					}}
+					onClick={() => handleClickOpen()}
+				>
 					<CardMedia
 						sx={{
 							display: 'flex',
@@ -34,11 +57,11 @@ export const SectionCard: FC<Props> = ({ section }) => {
 						<Box>
 							<Typography
 								color='black'
-								variant='h6'
+								variant='h5'
 								component='h3'
 								fontWeight='bold'
 							>
-								{_.upperCase(section.title)}
+								{_.upperCase(t(`sections.${section.id}`))}
 							</Typography>
 							<Typography color='black' variant='body2' component='p'>
 								{section.description}
