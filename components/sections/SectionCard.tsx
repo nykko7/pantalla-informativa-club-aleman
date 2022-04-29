@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+
 import {
 	alpha,
 	Box,
@@ -9,11 +10,11 @@ import {
 	SvgIcon,
 	Typography,
 } from '@mui/material';
-import { ISection } from '../../interfaces';
-
 import * as _ from 'lodash';
-import { SectionDialog } from './';
 import { useTranslation } from 'next-i18next';
+
+import { ISection } from '../../interfaces';
+import { SectionDialog } from './';
 
 interface Props {
 	section: ISection;

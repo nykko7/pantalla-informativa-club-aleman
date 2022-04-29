@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material';
+import { createTheme, darkScrollbar } from '@mui/material';
 // import { orange, red } from '@mui/material/colors';
 
 export const darkTheme = createTheme({

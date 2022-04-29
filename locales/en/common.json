@@ -1,36 +1,37 @@
 {
-	"sections": {
-		"history": {
-			"title": "history",
-			"description": "German Club History"
-		},
-		"gallery": {
-			"title": "gallery",
-			"description": "120 images"
-		},
-		"managers": {
-			"title": "managers",
-			"description": "7 managing directors"
-		},
-		"members": {
-			"title": "members",
-			"description": "120 members"
-		},
-		"lounge": {
-			"title": "lounge",
-			"description": "Images"
-		},
-		"club": {
-			"title": "club",
-			"description": "Images"
-		},
-		"turism": {
-			"title": "turism",
-			"description": "Images"
-		},
-		"news": {
-			"title": "news",
-			"description": "Lastest news"
-		}
-	}
+  "sections": {
+    "history": {
+      "title": "history",
+      "description": "German Club History"
+    },
+    "gallery": {
+      "title": "gallery",
+      "description": "120 images"
+    },
+    "managers": {
+      "title": "managers",
+      "description": "7 managing directors"
+    },
+    "members": {
+      "title": "members",
+      "description": "120 members"
+    },
+    "lounge": {
+      "title": "lounge",
+      "description": "Images"
+    },
+    "club": {
+      "title": "club",
+      "description": "Images"
+    },
+    "turism": {
+      "title": "turism",
+      "description": "Images"
+    },
+    "news": {
+      "title": "news",
+      "description": "Lastest news"
+    }
+  },
+  "german_club": "German Club"
 }

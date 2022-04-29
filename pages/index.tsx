@@ -1,27 +1,41 @@
 import { useState } from 'react';
-import Image from 'next/image';
 
+import Image from 'next/image';
 import { Box, Grid, Typography } from '@mui/material';
-import ClubImage from '../assets/img/club_aleman.jpeg';
-import { SECTIONS } from '../database/static/sections';
-import { SectionList, Logo } from '../components/sections';
-import { LanguageSelector } from '../components/ui';
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useRouter } from 'next/router';
+
+import { SectionList, Logo } from '../components/sections';
+import { LanguageSelector } from '../components/home';
+
+import { SECTIONS } from '../database/static/sections';
+import ClubImage from '../assets/img/club_aleman.jpeg';
 
 export default function Home() {
 	const [sections, setSections] = useState(SECTIONS);
-	const { locale } = useRouter();
+
+	const { t } = useTranslation();
 
 	return (
 		<Grid container paddingTop={4} paddingX={4}>
 			<Grid item xs={12}>
 				<Logo />
-				<Typography variant='h3' component='h1' fontWeight='bold' paddingY={2}>
-					Club Alemán{' '}
-					<Box display='inline' fontWeight='light'>
-						Puerto Montt
-					</Box>
+				<Typography
+					variant='h3'
+					component='h1'
+					fontWeight='bold'
+					paddingY={2}
+					display='inline'
+				>
+					{t('german_club') + ' '}
+				</Typography>
+				<Typography
+					variant='h3'
+					component='h1'
+					fontWeight='light'
+					display='inline'
+				>
+					Puerto Montt
 				</Typography>
 			</Grid>
 			<Grid item xs={12} display={'flex'} alignContent='stretch'>

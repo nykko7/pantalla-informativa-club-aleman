@@ -1,6 +1,7 @@
 import { ChangeEvent, FC } from 'react';
-import { AccountCircle } from '@mui/icons-material';
+
 import { InputAdornment, InputBase, Paper } from '@mui/material';
+import { AccountCircle } from '@mui/icons-material';
 
 interface Props {
 	search: string;

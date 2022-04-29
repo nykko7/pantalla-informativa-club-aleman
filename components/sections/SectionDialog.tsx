@@ -1,26 +1,15 @@
-import { useState } from 'react';
-
 import {
-	Box,
 	Button,
 	Dialog,
 	DialogActions,
 	DialogContent,
 	DialogContentText,
-	DialogProps,
 	DialogTitle,
-	FormControl,
-	FormControlLabel,
-	Grid,
-	InputLabel,
-	MenuItem,
-	Select,
-	SelectChangeEvent,
-	Switch,
 } from '@mui/material';
-import { ISection } from '../../interfaces';
-import { useTranslation } from 'next-i18next';
 import * as _ from 'lodash';
+import { useTranslation } from 'next-i18next';
+
+import { ISection } from '../../interfaces';
 import { MembersContent } from './members';
 
 interface Dialog {

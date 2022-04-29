@@ -2,8 +2,6 @@ import { FC } from 'react';
 
 import {
 	Avatar,
-	Divider,
-	Grid,
 	List,
 	ListItem,
 	ListItemAvatar,
@@ -13,6 +11,7 @@ import {
 	Typography,
 } from '@mui/material';
 import { IMember } from '../../../interfaces';
+
 import { randomColor } from '../../../utils';
 
 interface Props {
@@ -39,9 +38,9 @@ const groupByPosition = (members: IMember[]): groupByPosition => {
 				'Kassenwart',
 				'Vorstandsmitglieder',
 			].includes(member.position)
-		)
+		) {
 			positions['Vorstands'].push(member);
-		else if (
+		} else if (
 			['Ehren Beisitzender', 'Ehren Mitglieder'].includes(member.position)
 		) {
 			positions['Ehren Mitglieder'].push(member);

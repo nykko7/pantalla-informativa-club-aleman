@@ -1,36 +1,37 @@
 {
-	"sections": {
-		"history": {
-			"title": "historia",
-			"description": "Historia del Club Alemán"
-		},
-		"gallery": {
-			"title": "galería",
-			"description": "120 imágenes"
-		},
-		"managers": {
-			"title": "directivos",
-			"description": "7 socios directivos"
-		},
-		"members": {
-			"title": "socios",
-			"description": "120 socios"
-		},
-		"lounge": {
-			"title": "salón",
-			"description": "Imágenes"
-		},
-		"club": {
-			"title": "club",
-			"description": "Imágenes"
-		},
-		"turism": {
-			"title": "turismo",
-			"description": "Imágenes"
-		},
-		"news": {
-			"title": "noticias",
-			"description": "Últimas noticias"
-		}
-	}
+  "sections": {
+    "history": {
+      "title": "historia",
+      "description": "Historia del Club Alemán"
+    },
+    "gallery": {
+      "title": "galería",
+      "description": "120 imágenes"
+    },
+    "managers": {
+      "title": "directivos",
+      "description": "7 socios directivos"
+    },
+    "members": {
+      "title": "socios",
+      "description": "120 socios"
+    },
+    "lounge": {
+      "title": "salón",
+      "description": "Imágenes"
+    },
+    "club": {
+      "title": "club",
+      "description": "Imágenes"
+    },
+    "turism": {
+      "title": "turismo",
+      "description": "Imágenes"
+    },
+    "news": {
+      "title": "noticias",
+      "description": "Últimas noticias"
+    }
+  },
+  "german_club": "Club Alemán"
 }

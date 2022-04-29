@@ -2,6 +2,7 @@ import { ChangeEvent, useState, useEffect } from 'react';
 
 import { Grid, Box } from '@mui/material';
 import { MembersList } from './';
+
 import { MEMBERS } from '../../../database/static/members';
 import { MembersFinder } from './MembersFinder';
 
