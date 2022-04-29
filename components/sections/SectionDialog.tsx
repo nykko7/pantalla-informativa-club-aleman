@@ -50,7 +50,7 @@ export const SectionDialog = ({ open, section, handleClose }: Dialog) => {
 						<MembersContent />
 					) : (
 						<DialogContentText>
-							{`sections.${section.id}.title`}
+							{t(`sections.${section.id}.description`)}
 						</DialogContentText>
 					)}
 				</DialogContent>
