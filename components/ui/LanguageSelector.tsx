@@ -1,6 +1,5 @@
 import { Card, CardActionArea, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
 
 type language = 'en' | 'es' | 'de';
 

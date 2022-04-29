@@ -14,14 +14,7 @@ export default function Home() {
 	const { locale } = useRouter();
 
 	return (
-		<Grid
-			container
-			flexDirection='row'
-			justifyContent='space-between'
-			alignItems={'center'}
-			paddingTop={4}
-			paddingX={4}
-		>
+		<Grid container paddingTop={4} paddingX={4}>
 			<Grid item xs={12}>
 				<Logo />
 				<Typography variant='h3' component='h1' fontWeight='bold' paddingY={2}>

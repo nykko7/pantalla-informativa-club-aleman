@@ -11,6 +11,7 @@ import {
 	DialogTitle,
 	FormControl,
 	FormControlLabel,
+	Grid,
 	InputLabel,
 	MenuItem,
 	Select,
@@ -18,7 +19,9 @@ import {
 	Switch,
 } from '@mui/material';
 import { ISection } from '../../interfaces';
-// import * as _ from 'lodash'
+import { useTranslation } from 'next-i18next';
+import * as _ from 'lodash';
+import { MembersContent } from './members';
 
 interface Dialog {
 	open: boolean;
@@ -29,6 +32,7 @@ interface Dialog {
 }
 
 export const SectionDialog = ({ open, section, handleClose }: Dialog) => {
+	const { t } = useTranslation();
 	return (
 		<>
 			<Dialog
@@ -38,9 +42,17 @@ export const SectionDialog = ({ open, section, handleClose }: Dialog) => {
 				onClose={handleClose}
 				PaperProps={{ sx: { height: '90vh' } }}
 			>
-				<DialogTitle>{section.title}</DialogTitle>
+				<DialogTitle>
+					{_.upperFirst(t(`sections.${section.id}.title`))}
+				</DialogTitle>
 				<DialogContent>
-					<DialogContentText>{section.description}</DialogContentText>
+					{section.id === 'members' ? (
+						<MembersContent />
+					) : (
+						<DialogContentText>
+							{`sections.${section.id}.title`}
+						</DialogContentText>
+					)}
 				</DialogContent>
 				<DialogActions sx={{ padding: 4 }}>
 					<Button

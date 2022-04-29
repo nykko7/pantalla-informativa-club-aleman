@@ -61,10 +61,10 @@ export const SectionCard: FC<Props> = ({ section }) => {
 								component='h3'
 								fontWeight='bold'
 							>
-								{_.upperCase(t(`sections.${section.id}`))}
+								{_.upperCase(t(`sections.${section.id}.title`))}
 							</Typography>
 							<Typography color='black' variant='body2' component='p'>
-								{section.description}
+								{t(`sections.${section.id}.description`)}
 							</Typography>
 						</Box>
 						<SvgIcon

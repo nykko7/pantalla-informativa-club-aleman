@@ -1,12 +1,36 @@
 {
 	"sections": {
-		"history": "verlauf",
-		"gallery": "galerie",
-		"managers": "manager",
-		"members": "mitglieder",
-		"lounge": "salon",
-		"club": "verein",
-		"turism": "tourismus",
-		"news": "nachrichten"
+		"history": {
+			"title": "verlauf",
+			"description": "Deutsche Vereinsgeschichte"
+		},
+		"gallery": {
+			"title": "galerie",
+			"description": "120 bilder"
+		},
+		"managers": {
+			"title": "Vorstands",
+			"description": "7 Vorstands"
+		},
+		"members": {
+			"title": "mitglieder",
+			"description": "120 mitglieder"
+		},
+		"lounge": {
+			"title": "salon",
+			"description": "Bilder"
+		},
+		"club": {
+			"title": "verein",
+			"description": "Bilder"
+		},
+		"turism": {
+			"title": "tourismus",
+			"description": "Bilder"
+		},
+		"news": {
+			"title": "nachrichten",
+			"description": "Neuesten nachrichten"
+		}
 	}
 }
