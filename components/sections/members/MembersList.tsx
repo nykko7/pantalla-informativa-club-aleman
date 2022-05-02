@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useTranslation } from 'next-i18next';
 
 import {
 	Avatar,
@@ -24,36 +25,25 @@ interface groupByPosition {
 
 const groupByPosition = (members: IMember[]): groupByPosition => {
 	const positions = {
-		Vorstands: [] as IMember[],
-		'Ehren Mitglieder': [] as IMember[],
-		Mitglieder: [] as IMember[],
+		Member: [] as IMember[],
+		Honor_member: [] as IMember[],
 	};
 
 	for (const member of members) {
-		if (
-			[
-				'1.Vorsitzender',
-				'2.Vorsitzender',
-				'Schriftwart',
-				'Kassenwart',
-				'Vorstandsmitglieder',
-			].includes(member.position)
-		) {
-			positions['Vorstands'].push(member);
-		} else if (
-			['Ehren Beisitzender', 'Ehren Mitglieder'].includes(member.position)
-		) {
-			positions['Ehren Mitglieder'].push(member);
-		} else {
-			positions['Mitglieder'].push(member);
+		if (member.position === 'honor_member' || member.position === 'honor_advisor'){
+			positions['Honor_member'].push(member);
+		} else if(member.position === 'member') {
+			positions['Member'].push(member);
 		}
 	}
-
 	return positions;
 };
 
+
 export const MembersList: FC<Props> = ({ members }) => {
 	const positions = groupByPosition(members);
+	const { t } = useTranslation('positions');
+	console.log(positions);
 	return (
 		<List
 			sx={{
@@ -66,12 +56,12 @@ export const MembersList: FC<Props> = ({ members }) => {
 			}}
 			subheader={<li />}
 		>
-			{Object.keys(positions).map((position: string) => (
+			{/* {Object.keys(positions).map((position: string) => (
 				<li key={`${position}`}>
 					<ul>
 						<ListSubheader>
 							<Typography variant='h6' component='h6'>
-								{`${position}`}
+								{t(`positions.${position.toLowerCase()}.name`)}
 							</Typography>
 						</ListSubheader>
 
@@ -96,7 +86,7 @@ export const MembersList: FC<Props> = ({ members }) => {
 												component='span'
 												fontWeight={'light'}
 											>
-												{`${member.position}`}
+												{t(`positions.${member.position}.name`)}
 											</Typography>
 										}
 									/>
@@ -105,7 +95,85 @@ export const MembersList: FC<Props> = ({ members }) => {
 						))}
 					</ul>
 				</li>
-			))}
+			))} */}
+				<li key={'honor_member'}>
+					<ul>
+						<ListSubheader>
+							<Typography variant='h6' component='h6'>
+								{t(`positions.honor_member.name`)}
+							</Typography>
+						</ListSubheader>
+
+						{positions['Honor_member'].map((member: IMember) => (
+							<ListItem key={`${member.id}`} alignItems='flex-start'>
+								<ListItemButton>
+									<ListItemAvatar>
+										<Avatar
+											alt={`${member.first_name} ${member.last_name}`}
+											sx={{ bgcolor: '#333' }}
+										/>
+									</ListItemAvatar>
+									<ListItemText
+										primary={
+											<Typography fontWeight={'bold'}>
+												{`${member.first_name} ${member.last_name} ${member.second_surname}`}
+											</Typography>
+										}
+										secondary={
+											<Typography
+												variant='subtitle1'
+												component='span'
+												fontWeight={'light'}
+											>
+												{t(`positions.${member.position}.name`)}
+												{/* {t(`${member.position}`)} */}
+											</Typography>
+										}
+									/>
+								</ListItemButton>
+							</ListItem>
+						))}
+					</ul>
+				</li>
+				<li key={'member'}>
+					<ul>
+						<ListSubheader>
+							<Typography variant='h6' component='h6'>
+								{t(`positions.member.name`)}
+							</Typography>
+						</ListSubheader>
+
+						{positions['Member'].map((member: IMember) => (
+							<ListItem key={`${member.id}`} alignItems='flex-start'>
+								<ListItemButton>
+									<ListItemAvatar>
+										<Avatar
+											alt={`${member.first_name} ${member.last_name}`}
+											sx={{ bgcolor: '#333' }}
+										/>
+									</ListItemAvatar>
+									<ListItemText
+										primary={
+											<Typography fontWeight={'bold'}>
+												{`${member.first_name} ${member.last_name} ${member.second_surname}`}
+											</Typography>
+										}
+										secondary={
+											<Typography
+												variant='subtitle1'
+												component='span'
+												fontWeight={'light'}
+											>
+												{t(`positions.${member.position}.name`)}
+												{/* {t(`${member.position}`)} */}
+											</Typography>
+										}
+									/>
+								</ListItemButton>
+							</ListItem>
+						))}
+					</ul>
+				</li>
 		</List>
 	);
 };

@@ -11,6 +11,7 @@ import { useTranslation } from 'next-i18next';
 
 import { ISection } from '../../interfaces';
 import { MembersContent } from './members';
+import { DirectivesContent } from './directives';
 
 interface Dialog {
 	open: boolean;
@@ -37,6 +38,9 @@ export const SectionDialog = ({ open, section, handleClose }: Dialog) => {
 				<DialogContent>
 					{section.id === 'members' ? (
 						<MembersContent />
+					) :
+					section.id === 'directives' ? (
+						<DirectivesContent />
 					) : (
 						<DialogContentText>
 							{t(`sections.${section.id}.description`)}

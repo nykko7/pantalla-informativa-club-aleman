@@ -1,0 +1,32 @@
+{
+    "positions": {
+      "directives": {
+        "name": "Directives"
+      },
+      "president": {
+        "name": "President"
+      },
+      "vice_president": {
+        "name": "Vicepresident"
+      },
+      "secretary": {
+        "name": "Secretary"
+      },
+      "treasurer": {
+        "name": "Treasurer"
+      },
+      "board_member": {
+        "name": "Board Member"
+      },
+      "honor_advisor": {
+        "name": "Honor Advisor"
+      },
+      "honor_member": {
+        "name": "Honor Member"
+      },
+      "member": {
+        "name": "Member"
+      }
+  }
+}
+  

@@ -59,7 +59,7 @@ export default function Home() {
 	);
 }
 
-type language = 'en' | 'es' | 'de';
+type language = 'es' | 'en' | 'de';
 
 interface props {
 	locale: language;
@@ -68,7 +68,7 @@ interface props {
 export async function getStaticProps({ locale }: any) {
 	return {
 		props: {
-			...(await serverSideTranslations(locale, ['common'])),
+			...(await serverSideTranslations(locale, ['common' , 'positions'])),
 		},
 	};
 }

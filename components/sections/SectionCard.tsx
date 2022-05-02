@@ -39,7 +39,7 @@ export const SectionCard: FC<Props> = ({ section }) => {
 				open={openDialog}
 				handleClose={() => handleClose()}
 			/>
-			<Card elevation={1} sx={{ borderRadius: '10px', height: '100%' }}>
+			<Card elevation={0} sx={{ borderRadius: '10px', height: '100%' }}>
 				{/* <CardActionArea onClick={() => handleClick(section)}> */}
 				<CardActionArea
 					sx={{

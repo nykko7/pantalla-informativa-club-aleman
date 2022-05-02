@@ -1,0 +1,32 @@
+{
+    "positions": {
+      "directives": {
+        "name": "Directivos"
+      },
+      "president": {
+        "name": "Presidente"
+      },
+      "vice_president": {
+        "name": "Vicepresidente"
+      },
+      "secretary": {
+        "name": "Secretario"
+      },
+      "treasurer": {
+        "name": "Tesorero"
+      },
+      "board_member": {
+        "name": "Miembro de la Junta"
+      },
+      "honor_advisor": {
+        "name": "Consejero de Honor"
+      },
+      "honor_member": {
+        "name": "Miembro de Honor"
+      },
+      "member": {
+        "name": "Miembro"
+      }
+  }
+}
+  

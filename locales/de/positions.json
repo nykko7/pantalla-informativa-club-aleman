@@ -1,0 +1,32 @@
+{
+    "positions": {
+      "directives": {
+        "name": "Vorstands"
+      },
+      "president": {
+        "name": "1. Vorsitzender"
+      },
+      "vice_president": {
+        "name": "2. Vorsitzender"
+      },
+      "secretary": {
+        "name": "Schriftwart"
+      },
+      "treasurer": {
+        "name": "Kassenwart"
+      },
+      "board_member": {
+        "name": "Vorstandsmitglieder"
+      },
+      "honor_advisor": {
+        "name": "Ehren Beisitzender"
+      },
+      "honor_member": {
+        "name": "Ehren Mitglieder"
+      },
+      "member": {
+        "name": "Mitglieder"
+      }
+  }
+}
+  

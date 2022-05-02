@@ -8,7 +8,7 @@
 			"title": "galerie",
 			"description": "120 bilder"
 		},
-		"managers": {
+		"directives": {
 			"title": "Vorstands",
 			"description": "7 Vorstands"
 		},
