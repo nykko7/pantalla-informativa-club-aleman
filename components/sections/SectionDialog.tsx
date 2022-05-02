@@ -35,7 +35,11 @@ export const SectionDialog = ({ open, section, handleClose }: Dialog) => {
 				<DialogTitle>
 					{_.upperFirst(t(`sections.${section.id}.title`))}
 				</DialogTitle>
-				<DialogContent>
+				<DialogContent
+					sx={{
+						paddingY: '0px'
+					}}
+				>
 					{section.id === 'members' ? (
 						<MembersContent />
 					) :
@@ -47,7 +51,7 @@ export const SectionDialog = ({ open, section, handleClose }: Dialog) => {
 						</DialogContentText>
 					)}
 				</DialogContent>
-				<DialogActions sx={{ padding: 4 }}>
+				<DialogActions sx={{ padding: 2 }}>
 					<Button
 						color='error'
 						size={'large'}

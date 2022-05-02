@@ -33,7 +33,7 @@ export const MembersContent = () => {
 	return (
 		<Grid container spacing={2} justifyContent={'space-between'}>
 			<Grid item xs={4}>
-				<MembersFinder search={search} handleSearch={handleSearch} />
+				{/* <MembersFinder search={search} handleSearch={handleSearch} /> */}
 				<MembersList members={members} />
 			</Grid>
 			<Grid item xs={8}>

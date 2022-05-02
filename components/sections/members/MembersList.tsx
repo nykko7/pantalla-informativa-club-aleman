@@ -51,7 +51,7 @@ export const MembersList: FC<Props> = ({ members }) => {
 				bgcolor: 'background.paper',
 				position: 'relative',
 				overflow: 'auto',
-				height: 'calc(90vh - 280px)',
+				height: 'calc(100vh - 250px)',
 				'& ul': { padding: 0 },
 			}}
 			subheader={<li />}
