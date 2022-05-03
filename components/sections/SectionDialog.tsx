@@ -37,13 +37,12 @@ export const SectionDialog = ({ open, section, handleClose }: Dialog) => {
 				</DialogTitle>
 				<DialogContent
 					sx={{
-						paddingY: '0px'
+						paddingY: '0px',
 					}}
 				>
 					{section.id === 'members' ? (
 						<MembersContent />
-					) :
-					section.id === 'directives' ? (
+					) : section.id === 'directives' ? (
 						<DirectivesContent />
 					) : (
 						<DialogContentText>
@@ -58,7 +57,7 @@ export const SectionDialog = ({ open, section, handleClose }: Dialog) => {
 						variant={'outlined'}
 						onClick={handleClose}
 					>
-						Close
+						{t('ui.close')}
 					</Button>
 				</DialogActions>
 			</Dialog>

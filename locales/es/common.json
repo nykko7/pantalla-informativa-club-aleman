@@ -33,5 +33,8 @@
       "description": "Últimas noticias"
     }
   },
-  "german_club": "Club Alemán"
+  "german_club": "Club Alemán",
+  "ui": {
+    "close": "Cerrar"
+  }
 }
