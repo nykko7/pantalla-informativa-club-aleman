@@ -1,5 +1,5 @@
 import { ChangeEvent, useState, useEffect } from 'react';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'next-export-i18n';
 
 import { Grid, Box } from '@mui/material';
 import { DirectivesList } from '.';

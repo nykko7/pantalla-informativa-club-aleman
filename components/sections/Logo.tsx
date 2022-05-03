@@ -5,6 +5,10 @@ import { Box } from '@mui/material';
 
 import ClubLogo from '../../assets/img/club_logo.png';
 
+interface Props {
+	src: string;
+}
+
 export const Logo = () => {
 	const [isFullScreen, setIsFullScreen] = useState(false);
 
@@ -34,7 +38,11 @@ export const Logo = () => {
 			}}
 		>
 			<Image
+				loader={(ClubLogo) => ClubLogo.src}
+				unoptimized
 				src={ClubLogo}
+				width={'100px'}
+				height={'100px'}
 				alt='Imágen del club'
 				style={{ borderRadius: '10px' }}
 			/>

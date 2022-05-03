@@ -1,0 +1,69 @@
+{
+	"sections": {
+		"history": {
+			"title": "historia",
+			"description": "Historia del Club Alemán"
+		},
+		"gallery": {
+			"title": "galería",
+			"description": "120 imágenes"
+		},
+		"directives": {
+			"title": "directivos",
+			"description": "7 socios directivos"
+		},
+		"members": {
+			"title": "socios",
+			"description": "110 socios"
+		},
+		"lounge": {
+			"title": "salón",
+			"description": "Imágenes"
+		},
+		"club": {
+			"title": "club",
+			"description": "Imágenes"
+		},
+		"turism": {
+			"title": "turismo",
+			"description": "Imágenes"
+		},
+		"news": {
+			"title": "noticias",
+			"description": "Últimas noticias"
+		}
+	},
+	"german_club": "Club Alemán",
+	"ui": {
+		"close": "Cerrar"
+	},
+	"positions": {
+		"directives": {
+			"name": "Directivos"
+		},
+		"president": {
+			"name": "Presidente"
+		},
+		"vice_president": {
+			"name": "Vicepresidente"
+		},
+		"secretary": {
+			"name": "Secretario"
+		},
+		"treasurer": {
+			"name": "Tesorero"
+		},
+		"board_member": {
+			"name": "Miembro de la Junta"
+		},
+		"honor_advisor": {
+			"name": "Consejero de Honor"
+		},
+		"honor_member": {
+			"name": "Miembro de Honor"
+		},
+		"member": {
+			"name": "Miembro"
+		}
+	}
+}

@@ -2,14 +2,22 @@ import { useState } from 'react';
 
 import Image from 'next/image';
 import { Box, Grid, Typography } from '@mui/material';
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-export-i18n';
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { SectionList, Logo } from '../components/sections';
 import { LanguageSelector } from '../components/home';
 
 import { SECTIONS } from '../database/static/sections';
 import ClubImage from '../assets/img/club_aleman.jpeg';
+
+interface Props {
+	src: string;
+}
+
+function imageLoader({ src }: Props) {
+	return `/images/${src}`; // REPLACE WITH YOUR IMAGE DIRECTORY
+}
 
 export default function Home() {
 	const [sections, setSections] = useState(SECTIONS);
@@ -41,6 +49,8 @@ export default function Home() {
 			<Grid item xs={12} display={'flex'} alignContent='stretch'>
 				<Box width='50%' marginRight={3}>
 					<Image
+						loader={(ClubImage) => ClubImage.src}
+						unoptimized
 						src={ClubImage}
 						alt='Imágen del club'
 						objectFit='cover'
@@ -65,10 +75,10 @@ interface props {
 	locale: language;
 }
 
-export async function getStaticProps({ locale }: any) {
-	return {
-		props: {
-			...(await serverSideTranslations(locale, ['common' , 'positions'])),
-		},
-	};
-}
+// export async function getStaticProps({ locale }: any) {
+// 	return {
+// 		props: {
+// 			...(await serverSideTranslations(locale, ['common', 'positions'])),
+// 		},
+// 	};
+// }

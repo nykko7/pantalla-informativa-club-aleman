@@ -11,7 +11,7 @@ import {
 	Typography,
 } from '@mui/material';
 import * as _ from 'lodash';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'next-export-i18n';
 
 import { ISection } from '../../interfaces';
 import { SectionDialog } from './';

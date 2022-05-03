@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'next-export-i18n';
 
 import {
 	Avatar,
@@ -25,7 +25,7 @@ interface groupByPosition {
 
 const groupByPosition = (directives: IMember[]): groupByPosition => {
 	const positions = {
-		Directives: [] as IMember[]
+		Directives: [] as IMember[],
 	};
 
 	for (const directive of directives) {
@@ -46,7 +46,7 @@ const groupByPosition = (directives: IMember[]): groupByPosition => {
 
 export const DirectivesList: FC<Props> = ({ directives }) => {
 	const positions = groupByPosition(directives);
-	const { t } = useTranslation('positions');
+	const { t } = useTranslation();
 	return (
 		<List
 			sx={{

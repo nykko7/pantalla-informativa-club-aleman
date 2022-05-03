@@ -1,15 +1,28 @@
-import { Card, CardActionArea, Typography } from '@mui/material';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+
+// import { useLanguageQuery } from 'next-export-i18n';
+import { Card, CardActionArea, Typography } from '@mui/material';
 
 type language = 'en' | 'es' | 'de';
 
 export const LanguageSelector = () => {
 	const router = useRouter();
+	const [selectedLanguage, setSelectedLanguage] = useState('es');
+	// const [query] = useLanguageQuery(selectedLanguage);
+
+	useEffect(() => {}, [selectedLanguage]);
 
 	const handleLocaleChange = (selectedLanguage: language) => {
-		router.push(router.route, router.asPath, {
-			locale: selectedLanguage,
-		});
+		setSelectedLanguage(selectedLanguage);
+		router.push(
+			{
+				pathname: router.pathname,
+				query: { lang: selectedLanguage },
+			},
+			undefined,
+			{ shallow: false },
+		);
 	};
 
 	return (
@@ -25,7 +38,9 @@ export const LanguageSelector = () => {
 			>
 				<CardActionArea
 					sx={{ padding: 2, fontWeight: 'bolder' }}
-					onClick={() => handleLocaleChange('es')}
+					onClick={() => {
+						handleLocaleChange('es');
+					}}
 				>
 					<Typography color='black' component='h3' fontWeight='bold'>
 						ES
@@ -43,7 +58,9 @@ export const LanguageSelector = () => {
 			>
 				<CardActionArea
 					sx={{ padding: 2, fontWeight: 'bolder' }}
-					onClick={() => handleLocaleChange('en')}
+					onClick={() => {
+						handleLocaleChange('en');
+					}}
 				>
 					<Typography color='black' component='h3' fontWeight='bold'>
 						EN
@@ -61,7 +78,9 @@ export const LanguageSelector = () => {
 			>
 				<CardActionArea
 					sx={{ padding: 2, fontWeight: 'bolder' }}
-					onClick={() => handleLocaleChange('de')}
+					onClick={() => {
+						handleLocaleChange('de');
+					}}
 				>
 					<Typography color='black' component='h3' fontWeight='bold'>
 						DE

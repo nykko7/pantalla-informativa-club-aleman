@@ -1,0 +1,69 @@
+{
+	"sections": {
+		"history": {
+			"title": "verlauf",
+			"description": "Deutsche Vereinsgeschichte"
+		},
+		"gallery": {
+			"title": "galerie",
+			"description": "120 bilder"
+		},
+		"directives": {
+			"title": "Vorstands",
+			"description": "7 Vorstands"
+		},
+		"members": {
+			"title": "mitglieder",
+			"description": "110 mitglieder"
+		},
+		"lounge": {
+			"title": "salon",
+			"description": "Bilder"
+		},
+		"club": {
+			"title": "verein",
+			"description": "Bilder"
+		},
+		"turism": {
+			"title": "tourismus",
+			"description": "Bilder"
+		},
+		"news": {
+			"title": "nachrichten",
+			"description": "Neuesten nachrichten"
+		}
+	},
+	"german_club": "Deutscher Verein",
+	"ui": {
+		"close": "Schließen"
+	},
+	"positions": {
+		"directives": {
+			"name": "Vorstands"
+		},
+		"president": {
+			"name": "1. Vorsitzender"
+		},
+		"vice_president": {
+			"name": "2. Vorsitzender"
+		},
+		"secretary": {
+			"name": "Schriftwart"
+		},
+		"treasurer": {
+			"name": "Kassenwart"
+		},
+		"board_member": {
+			"name": "Vorstandsmitglieder"
+		},
+		"honor_advisor": {
+			"name": "Ehren Beisitzender"
+		},
+		"honor_member": {
+			"name": "Ehren Mitglieder"
+		},
+		"member": {
+			"name": "Mitglieder"
+		}
+	}
+}

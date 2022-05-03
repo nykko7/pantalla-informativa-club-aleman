@@ -1,0 +1,9 @@
+directories:
+  output: dist
+  buildResources: build
+asar: true
+files:
+  - filter:
+      - main
+      - out
+electronVersion: 18.2.0
