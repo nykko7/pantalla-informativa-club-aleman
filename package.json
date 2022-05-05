@@ -7,6 +7,7 @@
 	"scripts": {
 		"clean": "rimraf dist main ./out ./.next",
 		"dev": "npm run build-electron && electron .",
+		"dev-web": "next dev",
 		"build-renderer": "next build . && next export .",
 		"build-electron": "tsc -p electron-src",
 		"build": "npm run build-renderer && npm run build-electron",

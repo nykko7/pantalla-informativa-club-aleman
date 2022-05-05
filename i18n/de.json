@@ -35,7 +35,11 @@
 	},
 	"german_club": "Deutscher Verein",
 	"ui": {
-		"close": "Schließen"
+		"close": "Schließen",
+		"name": "Name",
+		"direction": "Richtung",
+		"phone": "Telefon",
+		"email": "Email"
 	},
 	"positions": {
 		"directives": {

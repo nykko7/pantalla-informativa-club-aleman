@@ -35,7 +35,11 @@
 	},
 	"german_club": "German Club",
 	"ui": {
-		"close": "Close"
+		"close": "Close",
+		"name": "Name",
+		"direction": "Direction",
+		"phone": "Phone",
+		"email": "Email"
 	},
 	"positions": {
 		"directives": {

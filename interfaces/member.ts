@@ -9,5 +9,6 @@ export interface IMember {
 	phone?: string;
 	mobile?: string;
 	address?: string;
+	direction?: string;
 	birthday?: string;
 }

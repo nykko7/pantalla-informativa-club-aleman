@@ -25,7 +25,10 @@ export default function Home() {
 	const { t } = useTranslation();
 
 	return (
-		<Grid container paddingTop={4} paddingX={4}>
+		<Grid container paddingTop={4} paddingX={4} sx={{
+			'alignContent':'space-around',
+			'height':'100vh'
+		}}>
 			<Grid item xs={12}>
 				<Logo />
 				<Typography

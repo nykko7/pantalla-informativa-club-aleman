@@ -17,6 +17,7 @@ import { randomColor } from '../../../utils';
 
 interface Props {
 	members: IMember[];
+	setMemberDetail: (member: IMember) => (void);
 }
 
 interface groupByPosition {
@@ -42,7 +43,7 @@ const groupByPosition = (members: IMember[]): groupByPosition => {
 	return positions;
 };
 
-export const MembersList: FC<Props> = ({ members }) => {
+export const MembersList: FC<Props> = ({ members, setMemberDetail }) => {
 	const positions = groupByPosition(members);
 	const { t } = useTranslation();
 	return (
@@ -106,7 +107,9 @@ export const MembersList: FC<Props> = ({ members }) => {
 					</ListSubheader>
 
 					{positions['Honor_member'].map((member: IMember) => (
-						<ListItem key={`${member.id}`} alignItems='flex-start'>
+						<ListItem key={`${member.id}`} alignItems='flex-start'
+							onClick={() => {setMemberDetail(member)}}
+						>
 							<ListItemButton>
 								<ListItemAvatar>
 									<Avatar
@@ -145,7 +148,9 @@ export const MembersList: FC<Props> = ({ members }) => {
 					</ListSubheader>
 
 					{positions['Member'].map((member: IMember) => (
-						<ListItem key={`${member.id}`} alignItems='flex-start'>
+						<ListItem key={`${member.id}`} alignItems='flex-start'
+							onClick={() => {setMemberDetail(member)}}
+						>
 							<ListItemButton>
 								<ListItemAvatar>
 									<Avatar

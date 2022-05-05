@@ -35,7 +35,11 @@
 	},
 	"german_club": "Club Alemán",
 	"ui": {
-		"close": "Cerrar"
+		"close": "Cerrar",
+		"name": "Nombre",
+		"direction": "Dirección",
+		"phone": "Telefóno",
+		"email": "Email"
 	},
 	"positions": {
 		"directives": {

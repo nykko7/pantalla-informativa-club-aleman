@@ -17,6 +17,7 @@ import { randomColor } from '../../../utils';
 
 interface Props {
 	directives: IMember[];
+	setMemberDetail: ((directives: IMember) => void);
 }
 
 interface groupByPosition {
@@ -44,7 +45,7 @@ const groupByPosition = (directives: IMember[]): groupByPosition => {
 	return positions;
 };
 
-export const DirectivesList: FC<Props> = ({ directives }) => {
+export const DirectivesList: FC<Props> = ({ directives, setMemberDetail }) => {
 	const positions = groupByPosition(directives);
 	const { t } = useTranslation();
 	return (
@@ -60,7 +61,8 @@ export const DirectivesList: FC<Props> = ({ directives }) => {
 			subheader={<li />}
 		>
 			{Object.keys(positions).map((position: string) => (
-				<li key={`${position}`}>
+				<li key={`${position}`}
+				>
 					<ul>
 						<ListSubheader>
 							<Typography variant='h6' component='h6'>
@@ -69,7 +71,9 @@ export const DirectivesList: FC<Props> = ({ directives }) => {
 						</ListSubheader>
 
 						{positions[`${position}`].map((member: IMember) => (
-							<ListItem key={`${member.id}`} alignItems='flex-start'>
+							<ListItem key={`${member.id}`} alignItems='flex-start'
+								onClick={() => {setMemberDetail(member)}}
+							>
 								<ListItemButton>
 									<ListItemAvatar>
 										<Avatar
